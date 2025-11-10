@@ -15,7 +15,7 @@ export interface Character {
   image: string;                 // URL de la imagen
   affiliation: string;           // Afiliación (Z Fighter, etc.)
   deletedAt: string | null;
-  transformations: Transformation[]; // Array de transformaciones
+  transformations: Transformation[]; // Array de transformaciones    
 }
 
 /**

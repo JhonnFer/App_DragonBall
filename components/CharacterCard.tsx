@@ -36,7 +36,17 @@ export const CharacterCard: React.FC<CharacterCardProps> = ({ character }) => {
         <Text style={globalStyles.characterRace}>
           {character.race} • {character.gender}
         </Text>
+        
+        {/* Afiliación AGREGADA */}
+        {character.affiliation && (
+            <Text style={globalStyles.characterAffiliation} numberOfLines={1}>
+                Afiliación: {character.affiliation}
+            </Text>
+        )}
+        
         <Text style={globalStyles.characterKi}>Ki: {character.ki}</Text>
+        
+        {/* NOTA: El campo Ki: {character.ki} se mantiene sin formateo de Ki Máximo. */}
       </View>
     </TouchableOpacity>
   );

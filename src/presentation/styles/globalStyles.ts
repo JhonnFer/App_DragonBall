@@ -4,15 +4,16 @@ import { StyleSheet } from "react-native";
  * Paleta de colores de la aplicación
  */
 export const Colors = {
-  primary: "#FF6B00",       // Naranja Dragon Ball
-  secondary: "#FFD700",     // Dorado
-  background: "#1A1A2E",    // Fondo oscuro
+  primary: "#FF6B00",      // Naranja Dragon Ball
+  secondary: "#FFD700",    // Dorado
+  background: "#1A1A2E",   // Fondo oscuro
   cardBackground: "#16213E",// Fondo de tarjetas
-  text: "#FFFFFF",          // Texto principal
-  textSecondary: "#B8B8B8", // Texto secundario
-  success: "#4CAF50",       // Verde
-  error: "#F44336",         // Rojo
-  border: "#2E2E48",        // Bordes
+  text: "#FFFFFF",         // Texto principal
+  textSecondary: "#B8B8B8",// Texto secundario
+  mutedText: "#AAAAAA",    // ⬅️ ¡AGREGADO: Color para texto apagado, como placeholders!
+  success: "#4CAF50",      // Verde
+  error: "#F44336",        // Rojo
+  border: "#2E2E48",       // Bordes
 };
 
 /**
@@ -76,7 +77,24 @@ export const globalStyles = StyleSheet.create({
     fontSize: 12,
     color: Colors.textSecondary,
   },
-
+  characterMaxKi: {
+    fontSize: 12, // Un poco más pequeño para diferenciarlo del Ki actual
+    color: Colors.textSecondary, // Color suave para que no compita con el nombre
+    marginBottom: 4, 
+  },
+characterAffiliation: {
+    fontSize: 12,
+    color: Colors.textSecondary, // Gris suave
+    marginBottom: 2,
+    fontWeight: '500',
+  },
+  
+  characterTransformation: {
+    fontSize: 13,
+    color: Colors.primary, // Color naranja para destacar la transformación
+    marginBottom: 2,
+    fontWeight: 'bold',
+  },
   // =TARJETAS DE PLANETAS =
   planetCard: {
     backgroundColor: Colors.cardBackground,
@@ -322,5 +340,33 @@ export const globalStyles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 4,
     height: 60,
+  },
+  
+  // ⬅️ ¡NUEVOS ESTILOS DE BÚSQUEDA AGREGADOS! 🚀
+  searchContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    backgroundColor: Colors.background,
+    borderBottomWidth: 1,
+    borderBottomColor: Colors.cardBackground, 
+  },
+  searchIcon: {
+    position: 'absolute',
+    left: 25,
+    zIndex: 10,
+  },
+  searchInput: {
+    flex: 1,
+    height: 45,
+    backgroundColor: Colors.cardBackground,
+    borderRadius: 8,
+    paddingLeft: 45, // Espacio para el ícono
+    paddingRight: 15,
+    color: Colors.text,
+    fontSize: 16,
+    borderWidth: 1,
+    borderColor: Colors.mutedText,
   },
 });
